@@ -1,0 +1,178 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "plugin:react/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "simple-import-sort",
+        "eslint-plugin-react",
+        "unused-imports"
+    ],
+    "ignorePatterns": [],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "quotes": [
+            2,
+            "double",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
+        ],
+        "brace-style": [
+            "error"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "space-before-function-paren": [
+            "error",
+            "never"
+        ],
+        "keyword-spacing": [
+            "error",
+            {
+                "overrides": {
+                    "if": {
+                        "after": false
+                    },
+                    "for": {
+                        "after": false
+                    },
+                    "while": {
+                        "after": false
+                    },
+                    "catch": {
+                        "after": false
+                    }
+                }
+            }
+        ],
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "function",
+                "next": "*"
+            },
+            {
+                "blankLine": "always",
+                "prev": "block-like",
+                "next": "*"
+            },
+            {
+                "blankLine": "always",
+                "prev": "import",
+                "next": "block-like"
+            }
+        ],
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    [
+                        "^react",
+                        "^@?\\w",
+                        "^(components|modules|utils)(/.*|$)",
+                        "^\\u0000",
+                        "^\\.\\.(?!/?$)",
+                        "^\\.\\./?$",
+                        "^\\./(?=.*/)(?!/?$)",
+                        "^\\.(?!/?$)",
+                        "^\\./?$"
+                    ]
+                ]
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "eqeqeq": "error",
+        "func-names": ["error", "never"],
+        "func-style": [
+            "error",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "prefer-const": "error",
+        "prefer-arrow-callback": "error",
+        "arrow-spacing": [
+            "error"
+        ],
+        "implicit-arrow-linebreak": [
+            "error",
+            "beside"
+        ],
+        "no-multiple-empty-lines": "error",
+        "space-before-blocks": "error",
+        "comma-spacing": "error",
+        "react/no-typos": "error",
+        "react/self-closing-comp": "error",
+        "react/jsx-closing-tag-location": "error",
+        "react/jsx-equals-spacing": [
+            "error",
+            "never"
+        ],
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "closingSlash": "never"
+            }
+        ],
+        "react/display-name": "off",
+        "no-unused-vars": "off",
+        "react/prop-types": "off",
+        "react/jsx-curly-newline": [
+            "error",
+            {
+                "multiline": "require",
+                "singleline": "forbid"
+            }
+        ],
+        "react/jsx-first-prop-new-line": [
+            "error",
+            "multiline"
+        ],
+        "react/jsx-max-props-per-line": "error",
+        "react/jsx-one-expression-per-line": "error",
+        "react/jsx-wrap-multilines": [
+            "error",
+            {
+                "declaration": "parens-new-line",
+                "assignment": "parens-new-line",
+                "return": "parens-new-line",
+                "arrow": "parens-new-line",
+                "condition": "parens-new-line",
+                "logical": "parens-new-line",
+                "prop": "ignore"
+            }
+        ]
+    }
+}
